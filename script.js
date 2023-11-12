@@ -50,3 +50,10 @@ document.querySelectorAll('.stickyNote').forEach(function(note) {
 });
 
 
+document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('noteDetails').style.display = 'none';
+    document.querySelectorAll('.stickyNote').forEach(function(note) {
+        note.style.display = 'block';
+    });
+});
+
