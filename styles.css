@@ -95,3 +95,70 @@ body {
     transform: rotate(20deg); 
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
 }
+
+@media (max-width: 1400px) {
+    .blackboard {
+        background-size: 100%;
+        width: 80%;
+        height: 80%;
+    }
+
+    .stickyNote {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .stickyNote {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .stickyNote {
+        height: 15px;
+        width: 15px;
+    }
+
+    .columns {
+        height: 70%;
+        align-items: flex-end;
+    }
+
+    .blackboard {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stickyNote {
+        height: 5px;
+        width: 5px;
+    }
+
+    .columns {
+        height: 50%;
+        align-items: flex-end;
+    }
+
+    .blackboard {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .stickyNote {
+        height: 2px;
+        width: 2px;
+    }
+
+    .column {
+        gap: 3px;
+    }
+}
