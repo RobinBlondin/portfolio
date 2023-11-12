@@ -1,0 +1,97 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.blackboard {
+    position: relative;
+    z-index: 1;
+    background-image: url('images/board.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    gap: 10;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    height: 900px;
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.categories {
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    width: 100%;
+}
+
+.column {
+    width: 20%;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: column;
+}
+
+.stickyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-height: 135px;
+    max-width: 350px;
+    min-width: 10px;
+    min-height: 10px;
+    height: 20%;
+    width: 100%;
+}
+
+.category {
+    width: 25%;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stickyNote {
+    position: absolute;
+
+    max-height: 50px;
+    max-width: 50px;
+    min-height: 10px;
+    min-width: 10px;
+    height: 50px;
+    width: 50px;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.stickyNote:hover {
+    border-bottom-right-radius: -5px;
+    height: 55px;
+    width: 55px;
+    transform: rotate(20deg); 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
