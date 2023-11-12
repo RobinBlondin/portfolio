@@ -27,3 +27,11 @@ function setUpBlackboard() {
 };
 
 setUpBlackboard();
+
+
+window.addEventListener('resize', setUpBlackboard);
+
+
+function randomize(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
