@@ -35,3 +35,18 @@ window.addEventListener('resize', setUpBlackboard);
 function randomize(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
+
+document.querySelectorAll('.stickyNote').forEach(function(note) {
+    note.addEventListener('click', function() {
+        var color = note.getAttribute('color');
+        var noteDetails = document.getElementById('noteDetails');
+        var noteText = document.getElementById('noteText');
+
+        noteDetails.style.display = 'flex';
+        noteDetails.style.backgroundColor = color;
+        noteText.textContent = note.textContent; 
+        note.style.display = 'none';
+    });
+});
+
+
