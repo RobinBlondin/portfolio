@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     height: 100vh;
     margin: 0;
 }
@@ -99,11 +100,11 @@ body {
     z-index: 1000; 
     
    
-    width: 500px; 
-    height: 500px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    width: 25vw; 
+    height: 25vw;
+    padding: 4%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 2%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -118,4 +119,11 @@ body {
     position: fixed;
     top:5%;
     right: 5%;
+}
+
+@media (max-width: 960px) {
+    .blackboard {
+        width: 80vw;
+        height: 50vw;
+    }
 }
