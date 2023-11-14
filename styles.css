@@ -11,7 +11,7 @@ body {
 .blackboard {
     position: relative;
     z-index: 1;
-    background-image: url('images/board2.png');
+    background-image: url('images/board3.png');
     background-size:cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@ body {
 
 .stickyNote {
     position: absolute;
-
+    
     max-height: 20px;
     max-width: 20px;
     height: 7.5%;
@@ -112,7 +112,9 @@ body {
 }
 
 #noteText {
-    color: black;
+    color: #525156;
+    font-family: 'Indie Flower', cursive;
+    font-size:30px
 }
 
 #closeButton {
