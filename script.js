@@ -1,6 +1,14 @@
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      console.log('This page was restored from the bfcache.');
+    } else {
+      console.log('This page was loaded normally.');
+    }
+  });
+
 function setUpBlackboard() {
     var stickyContainers = document.querySelectorAll('.stickyContainer')
-    var colors = ['#ffeb3b', '#ff4081', '#2196f3', '#4caf50', '#ff9800', '#9c27b0', '#03a9f4'];
+    var colors = ['#ffeb3b', '#ff4081', '#2196f3', '#4caf50', '#ff9800', '#03a9f4'];
     var rotations = [-6, -5. - 3, -2, -1, 0, 1, 2, 3, 4, 5];
     stickyContainers.forEach(function (container) {
         var stickyNotes = container.querySelectorAll('.stickyNote');
@@ -41,10 +49,12 @@ document.querySelectorAll('.stickyNote').forEach(function(note) {
         var color = note.getAttribute('color');
         var noteDetails = document.getElementById('noteDetails');
         var noteText = document.getElementById('noteText');
+        var clickedText = `#${note.id} p`;
 
+        console.log(clickedText);
         noteDetails.style.display = 'flex';
         noteDetails.style.backgroundColor = color;
-        noteText.textContent = note.textContent; 
+        noteText.innerHTML = document.querySelector(clickedText).innerHTML;
         note.style.display = 'none';
     });
 });
