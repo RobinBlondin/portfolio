@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,30 +30,78 @@
         <div class="columns">
             <div class="column" id="about-me-column">
                 <div class="stickyContainer" id="stickyContainerStyle1">
-                    <div class="stickyNote" id="about-me-1" color=""></div>
+                    <div class="stickyNote" id="about-me-1" color="">
+                        <p style="display: none;">
+                            My name is Robin Blondin.<br><br>
+                            I am currently studying Java development at Nackademin in Stockholm.
+                        </p>
+                    </div>
                 </div>
                 <div class="stickyContainer" id="stickyContainerStyle2">
-                    <div class="stickyNote" id="about-me-2"></div>
+                    <div class="stickyNote" id="about-me-2">
+                        <p style="display: none;">
+                            With a long background in the electrical industry, 
+                            I am now facing an exciting transition to the IT industry. 
+                        </p>
+                    </div>
                 </div>
                 <div class="stickyContainer" id="stickyContainerStyle3">
-                    <div class="stickyNote" id="about-me-3"></div>
+                    <div class="stickyNote" id="about-me-3">
+                        <p style="display: none;">
+                            
+                            My goal is to use my technical skills and tools to build a solid 
+                            foundation and establish myself as a good developer.
+                        </p>
+                    </div>
                 </div>
                 <div class="stickyContainer" id="stickyContainerStyle4">
-                    <div class="stickyNote" id="about-me-4"></div>
+                    <div class="stickyNote" id="about-me-4">
+                        <p style="display: none;">
+                            Interests<br><br>
+                            Programming , tech , fishing , bbq
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="column" id="resume-column">
                 <div class="stickyContainer">
-                    <div class="stickyNote" id="resume1"></div>
+                    <div class="stickyNote" id="resume1">
+                        <p style="display: none;">
+                            <b>Aug 23 - currently</b><br>
+                            <i>Java development student</i><br>
+                            Nackademin, Stockholm<br><br>
+
+                            <b>Jan 20 - Aug 23</b><br>
+                            <i>Service electrician</i><br>
+                            J.Gulliksson El AB, Stockholm 
+                        </p>
+                    </div>
                 </div>
                 <div class="stickyContainer">
-                    <div class="stickyNote" id="resume2"></div>
+                    <div class="stickyNote" id="resume2">
+                        <p style="display: none;">
+                            <b>Oct 18 - Jan 20</b><br>
+                            <i>Service electrician</i><br>
+                            Nymans Elektriska AB, Stockholm<br><br>
+
+                            <b>Jan 15 - Oct 18</b><br>
+                            <i>Service electrician</i><br>
+                            J.Gulliksson El AB, Stockholm 
+                        </p>
+                    </div>
                 </div>
                 <div class="stickyContainer">
-                    <div class="stickyNote" id="resume3"></div>
-                </div>
-                <div class="stickyContainer">
-                    <div class="stickyNote" id="resume4"></div>
+                    <div class="stickyNote" id="resume3">
+                        <p style="display: none;">
+                            <b>March 11 - Jan 15</b><br>
+                            <i>Apprentice/Electrican</i><br>
+                            Melins Elektromontage, Stockholm<br><br>
+
+                            <b>Nov 10 - March 11</b><br>
+                            <i>Fiber technician</i><br>
+                            City Sundblad Telecom, Stockholm 
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="column" id="portfolio">
@@ -87,7 +135,10 @@
         </div>
     </div>
     <div id="noteDetails" style="display: none;" color="">
-        <p id="noteText" style="color: black">Note content will go here</p>
+        <div class="imageBox"> 
+            <img src="" alt="">
+        </div>
+        <p id="noteText"></p>
         <button id="closeButton">Close</button>
     </div>
     <script src="script.js"></script>
