@@ -27,6 +27,16 @@ document.querySelectorAll('.stickyNote').forEach(function(note) {
 });
 
 
+document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('noteDetails').style.display = 'none';
+    document.querySelectorAll('.stickyNote').forEach(function(note) {
+        if(!note.id.includes('portfolio')) {
+            note.style.display = 'flex';
+            note.style.transform = note.originalTransform;
+        }
+    });
+});
+
 
 function setUpBlackboard() {
     var stickyContainers = document.querySelectorAll('.stickyContainer')
