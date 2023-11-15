@@ -105,7 +105,9 @@ body {
    
     width: 25vw; 
     height: 25vw;
-    padding: 4%;
+    background-image: url('images/paper.jpg');
+    background-blend-mode: darken;
+    padding: 10%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 2%;
     flex-direction: column;
