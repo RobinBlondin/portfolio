@@ -8,6 +8,26 @@ var colors = [
 
 var rotations = [-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5];
 
+document.querySelectorAll('.stickyNote').forEach(function(note) {
+    if(!note.id.includes('portfolio')) {
+    note.addEventListener('click', function() {
+        var color = note.getAttribute('data-color');
+        var noteDetails = document.getElementById('noteDetails');
+        var noteText = document.getElementById('noteText');
+        var clickedText = `#${note.id} p`;
+        
+
+        noteDetails.style.display = 'flex';
+        noteDetails.style.backgroundColor = color;
+        noteText.innerHTML = document.querySelector(clickedText).innerHTML;
+        note.style.display = 'none';
+        
+    });
+}
+});
+
+
+
 function setUpBlackboard() {
     var stickyContainers = document.querySelectorAll('.stickyContainer')
     var colors = ['#ffeb3b', '#ff4081', '#2196f3', '#4caf50', '#ff9800', '#03a9f4'];
