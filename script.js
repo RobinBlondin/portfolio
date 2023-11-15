@@ -1,10 +1,12 @@
-window.addEventListener('pageshow', (event) => {
-    if (event.persisted) {
-      console.log('This page was restored from the bfcache.');
-    } else {
-      console.log('This page was loaded normally.');
-    }
-  });
+var colors = [
+    'rgba(255, 255, 150, 0.95)', 
+    'rgba(150, 255, 150, 0.95)', 
+    'rgba(150, 150, 255, 0.95)', 
+    'rgba(255, 150, 150, 0.95)', 
+    'rgba(255, 200, 150, 0.95)'
+];
+
+var rotations = [-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5];
 
 function setUpBlackboard() {
     var stickyContainers = document.querySelectorAll('.stickyContainer')
