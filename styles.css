@@ -71,15 +71,18 @@ body {
 }
 
 .stickyNote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    
+    background-image: url('images/paper.jpg');
+    background-size: cover;
+    background-blend-mode:darken;
     max-height: 20px;
     max-width: 20px;
     height: 7.5%;
     width: 5%;
     padding: 10%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
