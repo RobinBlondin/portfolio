@@ -87,8 +87,7 @@ body {
 }
 
 .thumbnail {
-    width: 400%;
-    height: 400%;
+    width: 3vw;
 }
 
 .imageBox {
@@ -145,8 +144,6 @@ p {
     top: 5%;
     left: 5%;
 }
-
-
 
 @media (max-width: 960px) {
     .blackboard {
