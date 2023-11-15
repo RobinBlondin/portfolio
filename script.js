@@ -37,65 +37,55 @@ document.getElementById('closeButton').addEventListener('click', function() {
     });
 });
 
-
-function setUpBlackboard() {
-    var stickyContainers = document.querySelectorAll('.stickyContainer')
-    var colors = ['#ffeb3b', '#ff4081', '#2196f3', '#4caf50', '#ff9800', '#03a9f4'];
-    var rotations = [-6, -5. - 3, -2, -1, 0, 1, 2, 3, 4, 5];
-    stickyContainers.forEach(function (container) {
-        var stickyNotes = container.querySelectorAll('.stickyNote');
-
-        stickyNotes.forEach(function (note) {
-            
-            var randomColor = randomize(colors);
-            var randomRotation = randomize(rotations);
-            var maxX = container.clientWidth - note.offsetWidth;
-            var maxY = container.clientHeight - note.offsetHeight;
-            
-
-            var randomX = Math.random() * maxX;
-            var randomY = Math.random() * maxY;
-
-            note.setAttribute('color', randomColor);
-            note.style.left = randomX + 'px';
-            note.style.top = randomY + 'px';
-
-            note.style.backgroundColor = randomColor;
-            note.style.transform = 'rotate(' + randomRotation + 'deg)';
-        });
+document.querySelectorAll('.stickyNote').forEach(function(note) {
+    note.addEventListener('mouseenter', function() {
+        note.style.transform = `${note.originalTransform} rotateX(35deg)`;
+        note.style.boxShadow = '0px 10px 20px rgba(0, 0, 0, 0.8)';
+        note.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
     });
-};
-
-setUpBlackboard();
-
-
-window.addEventListener('resize', setUpBlackboard);
+    
+    note.addEventListener('mouseleave', function() {
+       
+        note.style.transform = note.originalTransform;
+        note.style.boxShadow = '5px 5px 10px rgba(0, 0, 0, 0.3)';
+        note.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
+        
+    });
+});
 
 
 function randomize(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-document.querySelectorAll('.stickyNote').forEach(function(note) {
-    note.addEventListener('click', function() {
-        var color = note.getAttribute('color');
-        var noteDetails = document.getElementById('noteDetails');
-        var noteText = document.getElementById('noteText');
-        var clickedText = `#${note.id} p`;
+function setUpBlackboard() {
+    var stickyContainers = document.querySelectorAll('.stickyContainer')
+    
+    stickyContainers.forEach(function (container) {
+        var stickyNotes = container.querySelectorAll('.stickyNote');
 
-        console.log(clickedText);
-        noteDetails.style.display = 'flex';
-        noteDetails.style.backgroundColor = color;
-        noteText.innerHTML = document.querySelector(clickedText).innerHTML;
-        note.style.display = 'none';
+        stickyNotes.forEach(function (note) {
+            var randomColor = randomize(colors);
+            var randomRotation = randomize(rotations);
+            var maxX = container.clientWidth - note.offsetWidth;
+            var maxY = container.clientHeight - note.offsetHeight;
+            var randomX = Math.random() * maxX;
+            var randomY = Math.random() * maxY;
+            var originalTransform = 'rotate(' + randomRotation + 'deg)';
+
+            note.setAttribute('data-color', randomColor);
+            note.style.left = randomX + 'px';
+            note.style.top = randomY + 'px';
+
+            note.style.backgroundColor = randomColor;
+            note.style.transform = originalTransform;
+            note.originalTransform = originalTransform;
+        });
     });
-});
+};
 
 
-document.getElementById('closeButton').addEventListener('click', function() {
-    document.getElementById('noteDetails').style.display = 'none';
-    document.querySelectorAll('.stickyNote').forEach(function(note) {
-        note.style.display = 'block';
-    });
-});
+setUpBlackboard();
+window.addEventListener('resize', setUpBlackboard);
+
 
