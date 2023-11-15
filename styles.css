@@ -84,7 +84,6 @@ body {
     height: 7.5%;
     width: 5%;
     padding: 10%;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .thumbnail {
@@ -100,7 +99,6 @@ body {
 .stickyText {
     color: #525156;
     font-family: 'Indie Flower', cursive;
-    font-size: 100%;
 }
 
 .link {
@@ -137,8 +135,7 @@ p {
 
 #noteText {
     color: #525156;
-    font-family: 'Indie Flower', cursive;
-    font-size:30px
+    font-family: 'Indie Flower', cursive;    
 }
 
 #closeButton {
@@ -157,3 +154,26 @@ p {
         height: 50vw;
     }
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .stickyText, #noteText {
+      font-size: 0.25em; 
+    }
+  }
+ 
+  @media only screen and (min-device-width : 480px) {
+    .stickyText, #noteText {
+      font-size: 0.7em;
+    }
+  }
+  
+ 
+  @media only screen and (min-width : 1200px) {
+    .stickyText {
+      font-size: 100%; 
+    }
+
+    #noteText {
+        font-size: 200%;
+    }
+  }
