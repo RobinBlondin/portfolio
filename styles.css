@@ -56,6 +56,7 @@ body {
 }
 
 .stickyContainer {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -86,12 +87,30 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.stickyNote:hover {
-    border-bottom-right-radius: -5px;
-    height: 9.5%;
-    width: 7%;
-    transform: rotate(20deg); 
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+.thumbnail {
+    width: 400%;
+    height: 400%;
+}
+
+.imageBox {
+    width: 25%;
+    height: 25%;
+}
+
+.stickyText {
+    color: #525156;
+    font-family: 'Indie Flower', cursive;
+    font-size: 100%;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    cursor: pointer;
 }
 
 #noteDetails {
@@ -130,7 +149,7 @@ body {
     left: 5%;
 }
 
-}
+
 
 @media (max-width: 960px) {
     .blackboard {
